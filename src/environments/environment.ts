@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyB4_nuN7EVNgIrx7XGS5BXMlRmLAyhlgd8",
+    authDomain: "kwaba-test.firebaseapp.com",
+    databaseURL: "https://kwaba-test.firebaseio.com",
+    projectId: "kwaba-test",
+    storageBucket: "kwaba-test.appspot.com",
+    messagingSenderId: "1029403674453",
+    appId: "1:1029403674453:web:a640eec05877816bf511dc",
+    measurementId: "G-E6HG1X2606"
+  }
 };
 
 /*
