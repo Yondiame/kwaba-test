@@ -34,7 +34,6 @@ export class AuthService {
   }
 
   // Sign in with email/password
-  // @ts-ignore
   SignIn = (email, password) => auth().signInWithEmailAndPassword(email, password)
     .then((result) => {
       this.ngZone.run(() => {
@@ -46,7 +45,6 @@ export class AuthService {
     })
 
   // Sign up with email/password
-  // @ts-ignore
   SignUp = (email, password) => auth().createUserWithEmailAndPassword(email, password)
     .then((result) => {
       /* returns promise */
@@ -65,7 +63,6 @@ export class AuthService {
   }
 
   // Auth logic to run auth providers
-  // @ts-ignore
   AuthLogin = provider => auth().signInWithPopup(provider)
     .then((result) => {
       this.ngZone.run(() => {
@@ -92,10 +89,9 @@ export class AuthService {
 
   // Sign out
   SignOut = async () => {
-    // @ts-ignore
-    await this.afAuth.auth.signOut();
+    await auth().signOut();
     localStorage.removeItem('user');
-    this.router.navigate(['sign-in']);
+    this.router.navigate(['login']);
   }
 
 }

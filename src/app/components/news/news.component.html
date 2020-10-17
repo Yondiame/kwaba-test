@@ -1,18 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <ul class="navbar-nav mr-auto float-right">
+    <li class="nav-item">
+            <span class="nav-link active">
+              <i class="fas fa-user"></i>{{authService.userData.email}}
+            </span>
+    </li>
+    <!-- Calling SignOut() Api from AuthService -->
+    <li class="nav-item">
+      <button class="btn btn-danger ml-3" (click)="authService.SignOut()">
+        <i class="fas fa-sign-out-alt"></i>Log out
+      </button>
+    </li>
+  </ul>
+</nav>
+
 <div class="container-fluid">
+
   <div class="row">
     <!-- Main content -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="inner-adjust">
+    <div class="col-9">
+<!--      <div class="inner-adjust">-->
 
-        <div class="pt-3 pb-2 mb-3 border-bottom">
+        <div class=" border-bottom">
           <h1 class="h2">News</h1>
         </div>
         <!-- Show user data when logged in -->
         <div class="row" *ngFor="let article of news">
-          <div class="col-md-12">
+          <div class="col-md-10">
             <div class="media">
               <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(article.urlToImage)}}"
-                   alt="{{article.title}}">
+                   alt="{{article.title}}" width="20%" height="20%">
               <div class="media-body">
                 <h1> {{article.title}} by <strong>{{article.author}}</strong></h1>
                 <p>{{article.description}}</p>
@@ -24,8 +41,8 @@
           </div>
         </div>
 
-      </div>
-    </main>
+<!--      </div>-->
+    </div>
 
   </div>
 </div>

@@ -1,29 +1,22 @@
-<div class="displayTable">
-  <div class="displayTableCell">
-
-    <div class="authBlock">
-      <h3>Sign In</h3>
-      <div class="formGroup">
-        <input type="text" class="formControl" placeholder="Username" #userName required>
-      </div>
-
-      <div class="formGroup">
-        <input type="password" class="formControl" placeholder="Password" #userPassword required>
-      </div>
-
-      <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
-      </div>
-
+<!--<form>-->
+  <div style="margin: auto; width: 50%; height:50%; ">
+    <div class="form-group ">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   #userName required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" #userPassword required>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)"/>
+    <div class="form-group mt-2">
       <div class="formGroup">
         <span class="or"><span class="orInner">Or</span></span>
       </div>
+      <div>
+        <span>Don't have an account? <span class="btn btn-primary" routerLink="/register"> Sign Up</span></span>
+      </div>
     </div>
-
-    <div class="redirectToLogin">
-      <span>Don't have an account?<span class="redirect" routerLink="/register"> Sign Up</span></span>
-    </div>
-
   </div>
-</div>
+<!--</form>-->

@@ -1,28 +1,22 @@
-<div class="displayTable">
-  <div class="displayTableCell">
-
-    <div class="authBlock">
-      <h3>Sign Up</h3>
-
-      <div class="formGroup">
-        <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
-      </div>
-
-      <div class="formGroup">
-        <input type="password" class="formControl" placeholder="Password" #userPwd required>
-      </div>
-
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
-      </div>
-
+<!--<form>-->
+  <div style="margin: auto; width: 50%; height:50%; ">
+    <div class="form-group ">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   #userEmail required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" #userPwd required>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
+    <div class="form-group mt-2">
       <div class="formGroup">
         <span class="or"><span class="orInner">Or</span></span>
       </div>
-    </div>
-    <div class="redirectToLogin">
-      <span>Already have an account? <span class="redirect" routerLink="/login">Log In</span></span>
+      <div>
+        <span>Already have an account? <a class="btn btn-primary" routerLink="/login"> Sign In</a></span>
+      </div>
     </div>
   </div>
-
-</div>
+<!--</form>-->
